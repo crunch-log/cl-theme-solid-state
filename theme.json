@@ -1,0 +1,10 @@
+﻿{
+  "name":  "Solid State",
+  "author":  "HTML5 UP",
+  "url": "http://html5up.net",
+
+  "assets": {
+    "dirs": ["assets", "images"],
+    "files":  ["favicon.ico"] 
+  } 
+}
