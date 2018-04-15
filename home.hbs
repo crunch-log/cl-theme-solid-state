@@ -45,16 +45,16 @@
             <div class="inner">
                 <div class="logo"><span class="icon fa-hashtag"></span></div>
                 <h2>{{Config.Site.Title}}</h2>
-                <p>{{Config.Site.SubTitle}}p>
+                <p>{{Config.Site.SubTitle}}</p>
 </div>
         </section>
 
         <!-- Wrapper -->
         <section id="wrapper">
             {{#each Posts}}
-            <section id="post{{@index}}" class="wrapper spotlight "><!-- add alt and style, create helper [[alt @index "alt style2"}} -->
+            <section id="post{{@index}}" class="wrapper spotlight {{alt @index "alt style3" "style1"}}">
                 <div class="inner">
-                    <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+                    <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a><!-- Todo: Add image support -->
                     <div class="content">
                         <h2 class="major">{{Title}}</h2>
                         <p>{{Description}}</p>

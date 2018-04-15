@@ -1,7 +1,33 @@
 ﻿{
   "name":  "Solid State",
-  "author":  "HTML5 UP",
-  "url": "http://html5up.net",
+  "description": "A slick new multi-pager that combines some of the ideas I've played with over at Pixelarity with an \"angular\" sort of look.",
+  "homepage": "https://html5up.net/solid-state",
+
+  "license": {
+    "name": "CCBY3.0",
+    "link": "http://creativecommons.org/licenses/by/3.0/" 
+  },
+
+  "tags": [
+    "theme",
+    "angular",
+    "slick",
+    "multi-pager"
+  ],
+
+  "features": [
+    "blog",
+    "post",
+    "page"
+  ],
+
+  "author": {
+    "name":  "HTML5 UP",
+    "homepage": "http://html5up.net",
+    "social": {
+      "twitter":  "https://twitter.com/ajlkn"  
+    } 
+  },
 
   "assets": {
     "dirs": ["assets", "images"],
