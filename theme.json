@@ -30,7 +30,7 @@
   },
 
   "assets": {
-    "dirs": ["assets", "images"],
+    "dirs": ["assets"],
     "files":  ["favicon.ico"] 
   } 
 }
