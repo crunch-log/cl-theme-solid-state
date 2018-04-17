@@ -1,0 +1,21 @@
+﻿<aside class="post-data">
+    <span>
+        <span class="icon fa-calendar"></span>
+        <span>{{format Date "yyyy-MM-dd"}}</span>
+    </span>
+    <span>
+        <span class="icon fa-user"></span>
+        <span>{{Author}}</span>
+    </span>
+    <span>
+        <span class="icon fa-folder"></span>
+        <span class="categories">
+            {{#each Categories}}
+            <a href="/category/{{this}}">{{this}}</a>
+            {{#sep @last}}
+            <span class="separator">, </span>
+            {{/sep}}
+            {{/each}}
+        </span>
+    </span>
+</aside>
