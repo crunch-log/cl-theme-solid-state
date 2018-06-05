@@ -3,8 +3,10 @@
 <section id="wrapper">
     <header>
         <div class="inner">
-            {{#partial "post-data"}}Post-Data{{/block}}
             <h2>{{Title}}</h2>
+            {{#partial-helper}}
+            {{>post-data}}
+            {{/partial-helper}}
             <p>{{Description}}</p>
         </div>
     </header>

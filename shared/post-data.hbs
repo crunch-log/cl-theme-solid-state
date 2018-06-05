@@ -12,10 +12,23 @@
         <span class="categories">
             {{#each Categories}}
             <a href="/category/{{this}}">{{this}}</a>
-            {{#sep @last}}
+            {{#unless @last}}
             <span class="separator">, </span>
-            {{/sep}}
+            {{/unless}}
             {{/each}}
         </span>
     </span>
+    {{#ifContext @root "post"}}
+    <span>
+        <span class="icon fa-tags"></span>
+        <span class="categories">
+            {{#each Keywords}}
+            <a href="/tags/{{this}}">{{this}}</a>
+            {{#unless @last}}
+            <span class="separator">, </span>
+            {{/unless}}
+            {{/each}}
+        </span>
+    </span>
+    {{/ifContext}}
 </aside>
