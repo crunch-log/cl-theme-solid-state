@@ -5,3 +5,8 @@
 .post-data .categories .separator {
     margin-right: 0.5em;
 }
+
+.wrapper.pagination nav {
+    padding: 30px 0;
+    text-align: center;
+}
