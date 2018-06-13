@@ -11,10 +11,7 @@
         <span class="icon fa-folder"></span>
         <span class="categories">
             {{#each Categories}}
-            <a href="/category/{{this}}">{{this}}</a>
-            {{#unless @last}}
-            <span class="separator">, </span>
-            {{/unless}}
+            <a href="{{@value}}">{{@key}}</a>
             {{/each}}
         </span>
     </span>
@@ -23,10 +20,7 @@
         <span class="icon fa-tags"></span>
         <span class="categories">
             {{#each Keywords}}
-            <a href="/tags/{{this}}">{{this}}</a>
-            {{#unless @last}}
-            <span class="separator">, </span>
-            {{/unless}}
+            <a href="{{@value}}">{{@key}}</a>
             {{/each}}
         </span>
     </span>
