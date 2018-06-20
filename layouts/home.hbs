@@ -14,9 +14,9 @@
     {{#each Posts}}
     <section id="post{{@index}}" class="wrapper spotlight {{alt @index "alt style3" "style1"}}">
         <div class="inner">
-            <a href="#" class="image"><img src="/assets/images/pic01.jpg" alt="" /></a><!-- Todo: Add image support -->
+            <a href="{{Permalink}}" class="image"><img src="{{BannerImage}}" alt="" /></a>
             <div class="content">
-                <h2 class="major">{{Title}}</h2>
+                <a href="{{Permalink}}"> <h2 class="major">{{Title}}</h2></a>
                 {{>post-data}}
                 <p>{{Description}}</p>
                 <a href="{{Permalink}}" class="special">Learn more</a>
@@ -25,31 +25,9 @@
     </section>
     {{/each}}
     <section class="wrapper pagination {{alt PostsCount "alt" ""}} style2">
-        {{#ifCond TotalPages '>' 1}}
-        <nav>
-            <ul class="pagination">
-                {{#if PreviousPageUrl}}
-                <li><a href="{{PreviousPageUrl}}" class="button small">Prev</a></li>
-                {{else}}
-                <li><span class="button small disabled">Prev</span></li>
-                {{/if}}
-
-                {{#each Pagination}}
-                {{#if IsCurrentPage}}
-                <li><a href="{{Url}}" class="page active">{{Page}}</a></li>
-                {{else}}
-                <li><a href="{{Url}}" class="page">{{Page}}</a></li>
-                {{/if}}
-                {{/each}}
-
-                {{#if NextPageUrl}}
-                <li><a href="{{NextPageUrl}}" class="button small">Next</a></li>
-                {{else}}
-                <li><span class="button small disabled">Next</span></li>
-                {{/if}}
-            </ul>
-        </nav>
-        {{/ifCond}}
+        {{#partial-helper}}
+        {{>pagination}}
+        {{/partial-helper}}
     </section>
 </section>
 

@@ -14,8 +14,8 @@
             <section class="features">
                 {{#each Posts}}
                 <article id="post{{@index}}">
-                    <a href="#" class="image"><img src="/assets/images/pic01.jpg" alt="" /></a><!-- Todo: Add image support -->
-                    <h3 class="major">{{Title}}</h3>
+                    <a href="{{Permalink}}" class="image"><img src="{{BannerImage}}" alt="" /></a>
+                    <a href="{{Permalink}}"> <h3 class="major">{{Title}}</h3></a>
                     {{>post-data}}
                     <p>{{Description}}</p>
                     <a href="{{Permalink}}" class="special">Learn more</a>
@@ -26,31 +26,9 @@
     </section>
 
     <div class="pagination">
-        {{#ifCond TotalPages '>' 1}}
-        <nav>
-            <ul class="pagination">
-                {{#if PreviousPageUrl}}
-                <li><a href="{{PreviousPageUrl}}" class="button small">Prev</a></li>
-                {{else}}
-                <li><span class="button small disabled">Prev</span></li>
-                {{/if}}
-
-                {{#each Pagination}}
-                {{#if IsCurrentPage}}
-                <li><a href="{{Url}}" class="page active">{{Page}}</a></li>
-                {{else}}
-                <li><a href="{{Url}}" class="page">{{Page}}</a></li>
-                {{/if}}
-                {{/each}}
-
-                {{#if NextPageUrl}}
-                <li><a href="{{NextPageUrl}}" class="button small">Next</a></li>
-                {{else}}
-                <li><span class="button small disabled">Next</span></li>
-                {{/if}}
-            </ul>
-        </nav>
-        {{/ifCond}}
+        {{#partial-helper}}
+        {{>pagination}}
+        {{/partial-helper}}
     </div>
 
 </section>

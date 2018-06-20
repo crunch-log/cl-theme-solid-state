@@ -1,0 +1,25 @@
+﻿{{#ifCond TotalPages '>' 1}}
+<nav>
+    <ul class="pagination">
+        {{#if PreviousPageUrl}}
+        <li><a href="{{PreviousPageUrl}}" class="button small">Prev</a></li>
+        {{else}}
+        <li><span class="button small disabled">Prev</span></li>
+        {{/if}}
+
+        {{#each Pagination}}
+        {{#if IsCurrentPage}}
+        <li><a href="{{Url}}" class="page active">{{Page}}</a></li>
+        {{else}}
+        <li><a href="{{Url}}" class="page">{{Page}}</a></li>
+        {{/if}}
+        {{/each}}
+
+        {{#if NextPageUrl}}
+        <li><a href="{{NextPageUrl}}" class="button small">Next</a></li>
+        {{else}}
+        <li><span class="button small disabled">Next</span></li>
+        {{/if}}
+    </ul>
+</nav>
+{{/ifCond}}
