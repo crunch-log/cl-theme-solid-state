@@ -14,7 +14,9 @@
     {{#each Posts}}
     <section id="post{{@index}}" class="wrapper spotlight {{alt @index "alt style3" "style1"}}">
         <div class="inner">
-            <a href="{{Permalink}}" class="image"><img src="{{BannerImage}}" alt="" /></a>
+            <a href="{{Permalink}}" class="image">
+                <div class="image-container"><img src="{{BannerImage}}" alt="Image: {{Title}}" /></div>
+            </a>
             <div class="content">
                 <a href="{{Permalink}}"> <h2 class="major">{{Title}}</h2></a>
                 {{>post-data}}

@@ -14,7 +14,7 @@
             <section class="features">
                 {{#each Posts}}
                 <article id="post{{@index}}">
-                    <a href="{{Permalink}}" class="image"><img src="{{BannerImage}}" alt="" /></a>
+                    <a href="{{Permalink}}" class="image"><img src="{{BannerImage}}" alt="{{Title}}" /></a>
                     <a href="{{Permalink}}"> <h3 class="major">{{Title}}</h3></a>
                     {{>post-data}}
                     <p>{{Description}}</p>
