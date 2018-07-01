@@ -4,6 +4,11 @@
     html5up.net | @ajlkn
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<!--
+    Theme ported to CrunchLog by b1thuntr3r
+    https://github.com/b1thunt3r
+    https://github.com/0b00/cl-theme-solid-state
+-->
 <html>
 <head>
     <title>
@@ -11,7 +16,7 @@
         {{#if Site.Title}}
         {{Site.Title}}
         {{else}}
-        Crunchlog
+        CrunchLog
         {{/if}}
     </title>
     <meta charset="utf-8" />
@@ -19,6 +24,9 @@
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/extra.css" />
+    {{#if IsContentLayout}}
+    {{>style}}
+    {{/if}}
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
