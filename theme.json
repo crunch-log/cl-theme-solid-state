@@ -2,7 +2,7 @@
   "name":  "Solid State",
   "description": "A slick new multi-pager that combines some of the ideas I've played with over at Pixelarity with an \"angular\" sort of look.",
   "homepage": "https://html5up.net/solid-state",
-  "type": "static",
+  "outputType": "html",
 
   "license": {
     "name": "CCBY3.0",
